@@ -2,7 +2,7 @@
 ![python-version](https://img.shields.io/badge/python-3.9-blue.svg)
 [![openai-version](https://img.shields.io/badge/openai-0.27.8-orange.svg)](https://openai.com/)
 [![license](https://img.shields.io/badge/License-GPL%202.0-brightgreen.svg)](LICENSE)
-[![Publish Docker image](https://github.com/n3d1117/chatgpt-telegram-bot/actions/workflows/publish.yaml/badge.svg)](https://github.com/n3d1117/chatgpt-telegram-bot/actions/workflows/publish.yaml)
+[![Publish Docker image](https://github.com/Ezhik-777/chatgpt-telegram-bot/actions/workflows/publish.yaml/badge.svg)](https://github.com/Ezhik-777/chatgpt-telegram-bot/actions/workflows/publish.yaml)
 
 A [Telegram bot](https://core.telegram.org/bots/api) that integrates with OpenAI's _official_ [ChatGPT](https://openai.com/blog/chatgpt/), [DALL·E](https://openai.com/product/dall-e-2) and [Whisper](https://openai.com/research/whisper) APIs to provide answers. Ready to use with minimal configuration required.
 
@@ -12,7 +12,7 @@ A [Telegram bot](https://core.telegram.org/bots/api) that integrates with OpenAI
 ![demo](https://user-images.githubusercontent.com/11541888/225114786-0d639854-b3e1-4214-b49a-e51ce8c40387.png)
 
 ### Plugins
-![plugins](https://github.com/n3d1117/chatgpt-telegram-bot/assets/11541888/83d5e0cd-e09a-463d-a292-722f919e929f)
+![plugins](https://github.com/Ezhik-777/chatgpt-telegram-bot/assets/11541888/83d5e0cd-e09a-463d-a292-722f919e929f)
 
 ## Features
 - [x] Support markdown in answers
@@ -38,8 +38,8 @@ A [Telegram bot](https://core.telegram.org/bots/api) that integrates with OpenAI
   - Weather, Spotify, Web search, text-to-speech and more. See [here](#available-plugins) for a list of available plugins
 
 ## Additional features - help needed!
-If you'd like to help, check out the [issues](https://github.com/n3d1117/chatgpt-telegram-bot/issues) section and contribute!  
-If you want to help with translations, check out the [Translations Manual](https://github.com/n3d1117/chatgpt-telegram-bot/discussions/219)
+If you'd like to help, check out the [issues](https://github.com/Ezhik-777/chatgpt-telegram-bot/issues) section and contribute!  
+If you want to help with translations, check out the [Translations Manual](https://github.com/Ezhik-777/chatgpt-telegram-bot/discussions/219)
 
 PRs are always welcome!
 
@@ -66,14 +66,14 @@ The following parameters are optional and can be set in the `.env` file:
 #### Budgets
 | Parameter             | Description                                                                                                                                                                                                                                                                                                                                                                               | Default value      |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|
-| `BUDGET_PERIOD`       | Determines the time frame all budgets are applied to. Available periods: `daily` *(resets budget every day)*, `monthly` *(resets budgets on the first of each month)*, `all-time` *(never resets budget)*. See the [Budget Manual](https://github.com/n3d1117/chatgpt-telegram-bot/discussions/184) for more information                                                                  | `monthly`          |
-| `USER_BUDGETS`        | A comma-separated list of $-amounts per user from list `ALLOWED_TELEGRAM_USER_IDS` to set custom usage limit of OpenAI API costs for each. For `*`- user lists the first `USER_BUDGETS` value is given to every user. **Note**: by default, *no limits* for any user (`*`). See the [Budget Manual](https://github.com/n3d1117/chatgpt-telegram-bot/discussions/184) for more information | `*`                |
-| `GUEST_BUDGET`        | $-amount as usage limit for all guest users. Guest users are users in group chats that are not in the `ALLOWED_TELEGRAM_USER_IDS` list. Value is ignored if no usage limits are set in user budgets (`USER_BUDGETS`=`*`). See the [Budget Manual](https://github.com/n3d1117/chatgpt-telegram-bot/discussions/184) for more information                                                   | `100.0`            |
+| `BUDGET_PERIOD`       | Determines the time frame all budgets are applied to. Available periods: `daily` *(resets budget every day)*, `monthly` *(resets budgets on the first of each month)*, `all-time` *(never resets budget)*. See the [Budget Manual](https://github.com/Ezhik-777/chatgpt-telegram-bot/discussions/184) for more information                                                                  | `monthly`          |
+| `USER_BUDGETS`        | A comma-separated list of $-amounts per user from list `ALLOWED_TELEGRAM_USER_IDS` to set custom usage limit of OpenAI API costs for each. For `*`- user lists the first `USER_BUDGETS` value is given to every user. **Note**: by default, *no limits* for any user (`*`). See the [Budget Manual](https://github.com/Ezhik-777/chatgpt-telegram-bot/discussions/184) for more information | `*`                |
+| `GUEST_BUDGET`        | $-amount as usage limit for all guest users. Guest users are users in group chats that are not in the `ALLOWED_TELEGRAM_USER_IDS` list. Value is ignored if no usage limits are set in user budgets (`USER_BUDGETS`=`*`). See the [Budget Manual](https://github.com/Ezhik-777/chatgpt-telegram-bot/discussions/184) for more information                                                   | `100.0`            |
 | `TOKEN_PRICE`         | $-price per 1000 tokens used to compute cost information in usage statistics. Source: https://openai.com/pricing                                                                                                                                                                                                                                                                          | `0.002`            |
 | `IMAGE_PRICES`        | A comma-separated list with 3 elements of prices for the different image sizes: `256x256`, `512x512` and `1024x1024`. Source: https://openai.com/pricing                                                                                                                                                                                                                                  | `0.016,0.018,0.02` |
 | `TRANSCRIPTION_PRICE` | USD-price for one minute of audio transcription. Source: https://openai.com/pricing                                                                                                                                                                                                                                                                                                       | `0.006`            |
 
-Check out the [Budget Manual](https://github.com/n3d1117/chatgpt-telegram-bot/discussions/184) for possible budget configurations.
+Check out the [Budget Manual](https://github.com/Ezhik-777/chatgpt-telegram-bot/discussions/184) for possible budget configurations.
 
 #### Additional optional configuration options
 | Parameter                          | Description                                                                                                                                                                                                                                                           | Default value                       |
@@ -98,7 +98,7 @@ Check out the [Budget Manual](https://github.com/n3d1117/chatgpt-telegram-bot/di
 | `IMAGE_SIZE`                       | The DALL·E generated image size. Allowed values: `256x256`, `512x512` or `1024x1024`                                                                                                                                                                                  | `512x512`                           |
 | `GROUP_TRIGGER_KEYWORD`            | If set, the bot in group chats will only respond to messages that start with this keyword                                                                                                                                                                             | -                                   |
 | `IGNORE_GROUP_TRANSCRIPTIONS`      | If set to true, the bot will not process transcriptions in group chats                                                                                                                                                                                                | `true`                              |
-| `BOT_LANGUAGE`                     | Language of general bot messages. Currently available: `en`, `de`, `ru`, `tr`, `it`, `fi`, `es`, `id`, `nl`, `zh-cn`, `zh-tw`, `vi`, `fa`, `pt-br`, `uk`.  [Contribute with additional translations](https://github.com/n3d1117/chatgpt-telegram-bot/discussions/219) | `en`                                |
+| `BOT_LANGUAGE`                     | Language of general bot messages. Currently available: `en`, `de`, `ru`, `tr`, `it`, `fi`, `es`, `id`, `nl`, `zh-cn`, `zh-tw`, `vi`, `fa`, `pt-br`, `uk`.  [Contribute with additional translations](https://github.com/Ezhik-777/chatgpt-telegram-bot/discussions/219) | `en`                                |
 
 Check out the [official API reference](https://platform.openai.com/docs/api-reference/chat) for more details.
 
@@ -143,7 +143,7 @@ Check out the [official API reference](https://platform.openai.com/docs/api-refe
 Clone the repository and navigate to the project directory:
 
 ```shell
-git clone https://github.com/n3d1117/chatgpt-telegram-bot.git
+git clone https://github.com/Ezhik-777/chatgpt-telegram-bot.git
 cd chatgpt-telegram-bot
 ```
 
@@ -186,7 +186,7 @@ docker pull n3d1117/chatgpt-telegram-bot:latest
 docker run -it --env-file .env n3d1117/chatgpt-telegram-bot
 ```
 
-or using the [GitHub Container Registry](https://github.com/n3d1117/chatgpt-telegram-bot/pkgs/container/chatgpt-telegram-bot/):
+or using the [GitHub Container Registry](https://github.com/Ezhik-777/chatgpt-telegram-bot/pkgs/container/chatgpt-telegram-bot/):
 
 ```shell
 docker pull ghcr.io/n3d1117/chatgpt-telegram-bot:latest
